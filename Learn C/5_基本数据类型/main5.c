@@ -1,8 +1,8 @@
 
 #include <stdio.h>
 #include <limits.h>
-//int,short,long,long long,bool,char,size_t,ptrdiff_t
-
+//整形 int,short,long,long long,bool,char,size_t,ptrdiff_t
+//浮点类型 float, double, long double
 void foo()
 {
 
@@ -32,12 +32,24 @@ void foo2()
 
     int s = '0\cba';
     printf("s=%s\n", (char *)&s);
+}
+
+void foo3()
+{
+    float f = 0.25f;
+    printf("float value --> %f\n", f);
+
+    f=-3.5E+3f;
+    printf("float value --> %f\n", f);
     
+    f=0x5p+10f; //(5*16)*2的10次方-->5*1024 
+    printf("float value --> %f\n", f);
 }
 
 int main(int argc, char const *argv[])
 {
     //foo();
-    foo2();
+    //foo2();
+    foo3();
     return 0;
 }
